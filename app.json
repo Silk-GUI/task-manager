@@ -1,7 +1,7 @@
 {
   "name": "Task Manager",
   "title": "Task Manager",
-  "url": "/taskManager/index.html",
+  "url": "index.html",
   "icon": "icon.png",
   "multipleWindows": false
 }
