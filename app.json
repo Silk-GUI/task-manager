@@ -3,5 +3,10 @@
   "title": "Task Manager",
   "url": "index.html",
   "icon": "icon.png",
-  "multipleWindows": false
+  "multipleWindows": false,
+  "bowerDependencies": {
+    "jquery": "latest",
+    "materialize": "latest",
+    "vue": "latest"
+  }
 }
