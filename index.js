@@ -3,9 +3,15 @@ var os = require('os-utils'),
 
 Silk.methods.add({
   'taskManager/apps': function(data, call_obj, send){
-    Silk.api.call('apps/list', {}, function(err, data){
-      console.dir(err);
-      send(err, data);
+    Silk.api.call('apps/state', {}, function(err, data){
+      console.dir(data);
+      var apps = [];
+      data.forEach(function (app) {
+        if(app.state !== "stopped") {
+          apps.push(app);
+        }
+      });
+      send(err, apps);
     });
   },
   'taskManager/restart': function(data, call_obj, send){
@@ -77,7 +83,7 @@ Silk.methods.add({
       //console.dir(processes);
       var endTime = new Date().getTime();
       //console.log('found google chrome:', isTrue);
-      console.log('took ' + (endTime - startTime));
+    //  console.log('took ' + (endTime - startTime));
       //console.log('finishing length', processes.length);
 
       //console.dir(processes);

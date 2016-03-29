@@ -1,7 +1,9 @@
+<!DOCTYPE html>
 <html>
 
 <head>
   <link href="/bc/materialize/bin/materialize.css" rel="stylesheet">
+  <title>Task Manager</title>
   <style>
     body {
       -webkit-user-select: none;
@@ -75,10 +77,9 @@
 </div>
   <div id="apps" class="page">
   <div class="container">
-    <h4>Apps</h4>
     <ul>
       <li v-repeat="apps"><img v-attr="src: icon"><span>{{name}}</span>
-        <a class="btn-flat waves-effect waves-red" v-on='click: restart(this)'>Restart</a>
+        <a class="btn-flat waves-effect waves-red" v-on="click: restart(this)">Restart</a>
       </li>
     </ul>
     <a class="btn-flat waves-effect waves-red reload">Reload</a>
@@ -105,14 +106,13 @@
     <div class="container">
     <h5>CPU Usage</h5>
       <canvas id="cpuUsageChart" width="400" height="100"></canvas>
-      <div><span class="cpu-used"></span></span></div>
+      <div><span class="cpu-used"></span></div>
     <h5>RAM Usage</h5>
       <canvas id="memUsageChart" width="400" height="100"></canvas>
       <div><span class="mem-used"></span> mb / <span class="mem-total"></span> mb</div>
       <a class="btn-flat waves-effect waves-red reload">Reload</a>
     </div>
   </div>
-</div>
   <script src="/bc/chart.js"></script>
   <script src="//cdn.jsdelivr.net/sockjs/0.3.4/sockjs.min.js"></script>
   <script src="/bc/jquery"></script>
