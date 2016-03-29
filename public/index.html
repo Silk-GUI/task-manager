@@ -262,15 +262,25 @@
           ]
       };
       var memContext = $("#memUsageChart").get(0).getContext("2d");
+
+      // calculate number of steps
+      var amount = 500;
       var steps = data / 500;
+     if (steps > 20) {
+        amount = 5000;
+        steps = data / 5000;
+      } else if(steps > 8) {
+          amount = 2000;
+          steps = data / 2000;
+        }
       // add another step if there is a remainder
-      if((data % 500) > 0) {
+      if((data % amount) > 0) {
         steps += 1;
       }
       memChart = new Chart(memContext).Line(chartData, {bezierCurve: false,
         scaleOverride: true,
         scaleSteps: steps,
-        scaleStepWidth: 500,
+        scaleStepWidth: amount,
         scaleStartValue: 0
           });
       // if we don't do this, the memory chart isn't shown.
