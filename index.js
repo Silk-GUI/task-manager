@@ -16,7 +16,7 @@ Silk.methods.add({
   },
   'taskManager/restart': function(data, call_obj, send){
     console.log("will restart + " + data.name);
-    Silk.api.call('apps/restart', data.name, function(err, result) {
+    Silk.api.call('apps/restart', data.path, function(err, result) {
       console.log(err);
       console.log(result);
     });

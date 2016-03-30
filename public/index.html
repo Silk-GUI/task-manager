@@ -128,7 +128,7 @@
       },
       methods: {
         'restart': function(app){
-          methods.call('taskManager/restart', {name: app.folder}, function(err, data){
+          methods.call('taskManager/restart', {path: app.path}, function(err, data){
             alert(err);
             alert(data);
           });
