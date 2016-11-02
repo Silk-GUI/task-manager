@@ -9,7 +9,7 @@
     "materialize": "latest",
     "vue": "latest",
     "Chart.js": "latest",
-    "Tablesaw": "latest"
+    "tablesaw": "latest"
   },
   "npmDependencies": {
     "os-utils": "latest"
