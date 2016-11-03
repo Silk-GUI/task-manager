@@ -1,0 +1,18 @@
+{
+  "name": "task-manager",
+  "productName": "Task Manager",
+  "version": "0.0.2",
+  "description": "Task manager for Silk GUI",
+  "dependencies": {
+    "eureca.io": "^0.6.42",
+    "express": "^4.14.0",
+    "node-ps": "0.0.2",
+    "os-utils": "0.0.14",
+    "silk-api": "0.0.4",
+    "sockjs": "^0.3.18"
+  },
+  "icon": "public/icon.png",
+  "silk": {
+    "url": "http://localhost:2002"
+  }
+}
