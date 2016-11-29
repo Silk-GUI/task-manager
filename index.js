@@ -1,5 +1,3 @@
-var os = require('os-utils');
-var exec = require('child_process').exec;
 var sockjs = require('sockjs');
 var http = require('http');
 var Eureca = require('eureca.io');
